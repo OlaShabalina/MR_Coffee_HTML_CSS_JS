@@ -377,17 +377,20 @@ footer {
 /* "contact us" page styles except for header and footer*/
 
 .contact-us-main-section {
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     overflow: hidden;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .contact-us-page-title {
     font-size: 1.6rem;
-    text-align: center;
     padding-bottom: 1rem;
+}
+
+.contact-us-form {
+    align-items: center;
 }
 
 .contact-details {
