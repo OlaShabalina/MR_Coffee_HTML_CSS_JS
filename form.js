@@ -15,8 +15,10 @@ const message = document.querySelector('#message');
 
 // here are events to submit form and open a pop-up
 
+
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    // checkInputs();
     popup.classList.add('active');
     overlay.classList.add('active');
 })

@@ -40,18 +40,20 @@
 
     <main>
         <section class="contact-us-main-section">
-            <p class="contact-us-page-title">Dites nous tout !</p>
+            <h3 class="contact-us-page-title">Dites nous tout !</h3>
             <form class="contact-us-form" action="#" method="get" id="contact-us-form">
                 <div class="form-element">
-                    <label class="form-item-label" for="name">Nom *</label>
+                <!-- I added spans for * (required) since they are different colour -->
+                    <label class="form-item-label" for="name">Nom <span class="required">*</span></label>
                     <input class="form-input" type="text" name="name" id="name" required>
+                <!-- Adding icons for validation for each element -->
                     <i class="success-icon">&#10003;</i>
                     <i class="error-icon">&#33;</i>
                     <small class="error-message">Error message</small>
                 </div>
                 
                 <div class="form-element">
-                    <label class="form-item-label" for="surname">Prénom *</label>
+                    <label class="form-item-label" for="surname">Prénom <span class="required">*</span></label>
                     <input class="form-input" type="text" name="surname" id="surname" required>
                     <i class="success-icon">&#10003;</i>
                     <i class="error-icon">&#33;</i>
@@ -67,7 +69,7 @@
                 </div>
                 
                 <div class="form-element">
-                    <label class="form-item-label" for="email">Adresse mail *</label>
+                    <label class="form-item-label" for="email">Adresse mail <span class="required">*</span></label>
                     <input class="form-input" type="email" name="email" id="email" required>
                     <i class="success-icon">&#10003;</i>
                     <i class="error-icon">&#33;</i>
@@ -75,17 +77,18 @@
                 </div>
                 
                 <div class="form-element">
-                    <label class="form-item-label" for="message">Message *</label>
-                    <input class="form-input" type="text" name="message" id="message" placeholder="Tapez votre message ici" required>
+                    <label class="form-item-label" for="message">Message <span class="required">*</span></label>
+                    <input class="form-input message-input" type="text" name="message" id="message" placeholder="Tapez votre message ici" required>
                     <i class="success-icon">&#10003;</i>
                     <i class="error-icon">&#33;</i>
                     <small class="error-message">Error message</small>
                 </div>
                 
-                <div class="form-element">
+                <div class="form-element button-container">
                 <input type="submit" value="ENVOYER" class="form-button" id="form-button">
                 </div>
             </form>
+            <!-- Styling a pop-up window below -->
             <div id="popup" class="popup">
                 <div class="popup-header">
                     <img class="popup-img" src="assets/logo_dark.png" alt="Mr Coffee logo - gentlman in a black head" class="popup-logo">
@@ -96,7 +99,7 @@
                 <button id="close-popup-button" class="close-popup-button">FERMER</button>
             </div>
             <div id="overlay" class="overlay"></div>
-            <p class="contact-us-page-title">On vous attend !</p>
+            <h3 class="contact-us-page-title">On vous attend !</h3>
             <div class="contact-details">
                 <p><span class="bold-text" >Mr.Coffee</span><br>
                     15 place Jules Guesde <br>

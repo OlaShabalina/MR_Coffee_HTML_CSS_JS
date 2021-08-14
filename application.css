@@ -389,6 +389,7 @@ footer {
 .contact-us-page-title {
     font-size: 1.6rem;
     padding-bottom: 1rem;
+    font-weight: normal;
 }
 
 .contact-details {
@@ -411,29 +412,68 @@ Submit button style and hover effect are added along with the index page button 
 .contact-us-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     width: 90%;
+    max-width: 600px;
+    padding: 2rem 0 2rem 0;
+}
+
+.form-element {
+    width: 100%;
+    display: block;
 }
 
 .form-item-label {
     display: block;
 }
 
-/* when the inout is correct */
-
 .form-input {
     background: var(--formBackground);
     height: 60px;
-    width: 60%;
+    width: 100%;
     display: block;
     border: var(--formBackground);
+    padding-left: 10px;
 }
 
-.form-element i {
+.message-input {
+    height: 120px;
+}
+
+.form-item-label {
+    font-size: 20px;
+    padding-bottom: 6px;
+}
+
+.required {
+    color: #6a7b8b;
+}
+
+.message-input {
+    display: block;
+    flex-wrap: wrap;
+
+}
+
+.message-input::placeholder {
+    color: var(--whiteColor);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+/* when the inout is correct */
+
+.success-icon, .error-icon {
     visibility: hidden;
 }
 
-.form-element small {
+.error-message {
     visibility: hidden;
 }
 
@@ -441,13 +481,16 @@ Submit button style and hover effect are added along with the index page button 
 
 .form-element.success input {
     border: 3px solid green;
+    background: var(--formBackground);
     height: 60px;
-    width: 60%;
+    width: 100%;
+    display: block;
+    padding-left: 10px;
 }
 
 .form-element.success .success-icon {
     visibility: visible;
-    display: inline;
+    margin-left: 12px;
     color: green;
 }
 
@@ -455,14 +498,20 @@ Submit button style and hover effect are added along with the index page button 
 
 .form-element.error input{
     border: 3px solid red;
+    background: var(--formBackground);
     height: 60px;
-    width: 60%;
+    width: 100%;
+    display: block;
+    padding-left: 10px;
 }
 
 .form-element.error .error-icon {
     visibility: visible;
-    display: inline;
     color: red;
+}
+
+.form-element.error .success-icon {
+    visibility: hidden;
 }
 
 .form-element.error .error-message {
@@ -496,6 +545,7 @@ Submit button style and hover effect are added along with the index page button 
     display: grid;
     grid-template-columns: 30% 70%;
     justify-items: center;
+    align-items: center;
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 27pt;
@@ -517,6 +567,7 @@ Submit button style and hover effect are added along with the index page button 
     width: 90%;
     padding: 30px 0 30px 0;
     line-height: 23pt;
+    font-weight: bold;
 }
 
 .overlay {
@@ -705,7 +756,21 @@ Submit button style and hover effect are added along with the index page button 
 
     .contact-us-page-title {
         font-size: 2rem;
+        font-weight: normal;
         text-align: center;
         padding-bottom: 1.7rem;
     }
+
+    /* pop-up change here */
+
+    .popup {
+        top: 10%;
+    }
+
+    .popup-header {
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        font-size: 1.4rem;
+    }
+
 }
