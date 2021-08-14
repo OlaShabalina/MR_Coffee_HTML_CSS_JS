@@ -419,9 +419,60 @@ Submit button style and hover effect are added along with the index page button 
     display: block;
 }
 
+/* when the inout is correct */
+
+.form-input {
+    background: var(--formBackground);
+    height: 60px;
+    width: 60%;
+    display: block;
+    border: var(--formBackground);
+}
+
+.form-element i {
+    visibility: hidden;
+}
+
+.form-element small {
+    visibility: hidden;
+}
+
+/* Success events if the data is correct */
+
+.form-element.success input {
+    border: 3px solid green;
+    height: 60px;
+    width: 60%;
+}
+
+.form-element.success .success-icon {
+    visibility: visible;
+    display: inline;
+    color: green;
+}
+
+/* Error event if the data is not valid */
+
+.form-element.error input{
+    border: 3px solid red;
+    height: 60px;
+    width: 60%;
+}
+
+.form-element.error .error-icon {
+    visibility: visible;
+    display: inline;
+    color: red;
+}
+
+.form-element.error .error-message {
+    visibility: visible;
+    color: red;
+}
+
 /* Styling out popup here, button style is set up above along with other buttons*/
 
-#popup {
+.popup {
     position: fixed;
     border: 0.2px solid var(--background);
     background: #fcfcfc;
@@ -437,7 +488,7 @@ Submit button style and hover effect are added along with the index page button 
     z-index: 9;
 }
 
-#popup.active {
+.popup.active {
     transform: scale(1);;
 }
 
@@ -468,7 +519,7 @@ Submit button style and hover effect are added along with the index page button 
     line-height: 23pt;
 }
 
-#overlay {
+.overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -481,7 +532,7 @@ Submit button style and hover effect are added along with the index page button 
     z-index: 1;
 }
 
-#overlay.active {
+.overlay.active {
     opacity: 1;
     pointer-events: all;
 }

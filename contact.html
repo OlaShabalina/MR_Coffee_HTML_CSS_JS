@@ -45,28 +45,48 @@
                 <div class="form-element">
                     <label class="form-item-label" for="name">Nom *</label>
                     <input class="form-input" type="text" name="name" id="name" required>
+                    <i class="success-icon">&#10003;</i>
+                    <i class="error-icon">&#33;</i>
+                    <small class="error-message">Error message</small>
                 </div>
+                
                 <div class="form-element">
                     <label class="form-item-label" for="surname">Prénom *</label>
                     <input class="form-input" type="text" name="surname" id="surname" required>
+                    <i class="success-icon">&#10003;</i>
+                    <i class="error-icon">&#33;</i>
+                    <small class="error-message">Error message</small>
                 </div>
+                
                 <div class="form-element">
                     <label class="form-item-label" for="phone">Téléphone</label>
                     <input class="form-input" type="number" name="phone" id="phone" required>
+                    <i class="success-icon">&#10003;</i>
+                    <i class="error-icon">&#33;</i>
+                    <small class="error-message">Error message</small>
                 </div>
+                
                 <div class="form-element">
                     <label class="form-item-label" for="email">Adresse mail *</label>
                     <input class="form-input" type="email" name="email" id="email" required>
+                    <i class="success-icon">&#10003;</i>
+                    <i class="error-icon">&#33;</i>
+                    <small class="error-message">Error message</small>
                 </div>
+                
                 <div class="form-element">
                     <label class="form-item-label" for="message">Message *</label>
                     <input class="form-input" type="text" name="message" id="message" placeholder="Tapez votre message ici" required>
+                    <i class="success-icon">&#10003;</i>
+                    <i class="error-icon">&#33;</i>
+                    <small class="error-message">Error message</small>
                 </div>
+                
                 <div class="form-element">
                 <input type="submit" value="ENVOYER" class="form-button" id="form-button">
                 </div>
             </form>
-            <div id="popup">
+            <div id="popup" class="popup">
                 <div class="popup-header">
                     <img class="popup-img" src="assets/logo_dark.png" alt="Mr Coffee logo - gentlman in a black head" class="popup-logo">
                     <p>MERCI <br>

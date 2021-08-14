@@ -13,15 +13,11 @@ const phone = document.querySelector('#phone');
 const email = document.querySelector('#email');
 const message = document.querySelector('#message');
 
-// here are events to submit form and open a pop-up
-
+// here are events to submit form and close pop-up
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    popup.classList.add('active');
-    overlay.classList.add('active');
+    checkInputs()
 })
-
-
 
 function checkInputs() {
  // get values from inputs
@@ -74,7 +70,9 @@ function checkInputs() {
 
 // show the pop-up if everything is successful
 
-    
+    if (setSuccessFor(username) && setSuccessFor(surname) && setSuccessFor(email) && setSuccessFor(message)) {
+        console.log("YEs")
+    }
 
 }
 
