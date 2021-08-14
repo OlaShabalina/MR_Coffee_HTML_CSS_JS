@@ -20,6 +20,8 @@
     --textColor: rgb(92, 91, 91);
     --whiteColor: rgb(255, 255, 255);
     --hoverColor: rgb(231, 145, 65);
+    --lightElementBackground: #bac2c9;
+    --formBackground: #c4cad0;
 }
 
 *, *::before, *::after {
@@ -192,7 +194,7 @@ h2 {
 .card {
     width: 90%;
     text-align: center;
-    background: #bac2c9;
+    background: var(--lightElementBackground)
     color: var(--whiteColor);
     box-shadow: 0px 1px 2px 1.5px rgb(150, 150, 150, 70%);
     margin-block-end: 20px;
@@ -217,19 +219,19 @@ h2 {
 
 /* button "find ut more" */
 
-.find-more {
+.find-more, .form-button, .close-popup-button {
     background-color: var(--background);
     width: 13rem;
     height: 3.5rem;
     border-radius: 7px;
     border: none;
-    box-shadow: 1px 1px 1px rgb(150, 150, 150, 50%);
+    box-shadow: 1px 2px 3px rgb(150, 150, 150, 50%);
     color: var(--whiteColor);
     font-weight: normal;
     font-size: 1.2rem;
 }
 
-.find-more:hover {
+.find-more:hover , .form-button:hover, .close-popup-button:hover {
     cursor: pointer;
     background-color: var(--hoverColor);
 }
@@ -389,10 +391,6 @@ footer {
     padding-bottom: 1rem;
 }
 
-.contact-us-form {
-    align-items: center;
-}
-
 .contact-details {
     width: max-content;
     margin: auto;
@@ -405,7 +403,87 @@ footer {
 .map {
     padding-top: 3rem;
     margin-bottom: 6rem;
-    border: 2px solid black;
+}
+
+/* Working on the form of the contact-us page. 
+Submit button style and hover effect are added along with the index page button to match the style throthout the website */
+
+.contact-us-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.form-item-label {
+    display: block;
+}
+
+/* Styling out popup here, button style is set up above along with other buttons*/
+
+#popup {
+    position: fixed;
+    border: 0.2px solid var(--background);
+    background: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    top: 20%;
+    padding: 2.5rem 1rem 2.5rem 1rem;
+    margin: 10%;
+    transform: scale(0); /*this is the part hiding the popup*/    
+    transition: 200ms ease-in-out;
+    z-index: 9;
+}
+
+#popup.active {
+    transform: scale(1);;
+}
+
+.popup-header {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 27pt;
+    width: 100%;
+}
+
+.popup-img {
+    width: 3rem;
+    padding-left: 30%;
+}
+
+.popup-header p {
+    text-align: center;
+    padding-left: 10%;
+}
+
+.popup-content {
+    text-align: left;
+    width: 90%;
+    padding: 30px 0 30px 0;
+    line-height: 23pt;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(143, 143, 143, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+    z-index: 1;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }
 
 @media screen and (min-width: 650px) {
