@@ -480,7 +480,7 @@ Submit button style and hover effect are added along with the index page button 
 /* Success events if the data is correct */
 
 .form-element.success input {
-    border: 3px solid green;
+    border: 3px solid rgb(180, 221, 180);
     background: var(--formBackground);
     height: 60px;
     width: 100%;
@@ -491,13 +491,13 @@ Submit button style and hover effect are added along with the index page button 
 .form-element.success .success-icon {
     visibility: visible;
     margin-left: 12px;
-    color: green;
+    color: rgb(180, 221, 180);
 }
 
 /* Error event if the data is not valid */
 
 .form-element.error input{
-    border: 3px solid red;
+    border: 3px solid rgb(228, 121, 121);
     background: var(--formBackground);
     height: 60px;
     width: 100%;
@@ -507,7 +507,7 @@ Submit button style and hover effect are added along with the index page button 
 
 .form-element.error .error-icon {
     visibility: visible;
-    color: red;
+    color: rgb(228, 121, 121);
 }
 
 .form-element.error .success-icon {
