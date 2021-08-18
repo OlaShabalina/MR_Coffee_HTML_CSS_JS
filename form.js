@@ -1,6 +1,5 @@
-// Assigning all the variables first
+// Choosing elements we will be using 
 
-const submitButton = document.querySelector("#form-button");
 const contactForm = document.querySelector('#contact-us-form')
 const closePopupButton = document.querySelector("#close-popup-button");
 const overlay = document.querySelector("#overlay");
@@ -41,7 +40,7 @@ function checkInputs() {
     } else {
         setSuccessFor(username);
         count++
-        dataStorage.username = username;
+        dataStorage.username = nameValue;
     }
 
 // Validating surname the same way as name
@@ -51,7 +50,7 @@ function checkInputs() {
     } else {
         setSuccessFor(surname);
         count++
-        dataStorage.surname = surname;
+        dataStorage.surname = surnameValue;
     }
 
 //Validating phone numer 
@@ -59,7 +58,7 @@ function checkInputs() {
         setErrorFor(phone, "Veuillez saisir un numéro de téléphone valide"); // translation: Please enter a valid phone number
     } else {
         setSuccessFor(phone);
-        dataStorage.phone = phone;
+        dataStorage.phone = phoneValue;
     }
 
 // Validating email 
@@ -70,7 +69,7 @@ function checkInputs() {
     } else {
         setSuccessFor(email);
         count++
-        dataStorage.email = email;
+        dataStorage.email = emailValue;
     }
 
 // Validating message
@@ -80,14 +79,14 @@ function checkInputs() {
     } else {
         setSuccessFor(message)
         count++
-        dataStorage.message = message;
+        dataStorage.message = messageValue;
     }
 
 // show the pop-up if everything is successful, I'll use count for that
 
     if (count === 4) {
         console.log(dataStorage);
-            // reset colors of input once the form is submitted
+        // reset colors of input once the form is submitted
         resetSuccessError(username);
         resetSuccessError(surname);
         resetSuccessError(phone);
@@ -104,11 +103,12 @@ function checkInputs() {
 
 function setErrorFor (input, message) {
     const formElement = input.parentElement; 
+
     const errorMessage = formElement.querySelector('.error-message');
     
     // adding error message inside small tag
     errorMessage.innerText = message;
-    formElement.classList.add('error');
+    formElement.classList.add('error')
 }
 
 function setSuccessFor (input) {
@@ -128,7 +128,6 @@ function isPhoneValid(phone) {
     return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(phone);
 }
 
-
 //Function to validate email will be here
 
 function isEmailValid(email) {
@@ -141,4 +140,5 @@ function isEmailValid(email) {
 closePopupButton.addEventListener('click', () => {
     popup.classList.remove('active');
     overlay.classList.remove('active');
+    contactForm.reset();
 })

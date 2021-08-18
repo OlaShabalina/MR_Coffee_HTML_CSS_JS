@@ -41,7 +41,7 @@
     <main>
         <section class="contact-us-main-section">
             <h3 class="contact-us-page-title">Dites nous tout !</h3>
-            <form class="contact-us-form" action="#" method="get" id="contact-us-form">
+            <form class="contact-us-form" action="#" method="get" id="contact-us-form" novalidate>
                 <div class="form-element">
                 <!-- I added spans for * (required) since they are different colour -->
                     <label class="form-item-label" for="name">Nom <span class="required">*</span></label>
@@ -62,7 +62,7 @@
                 
                 <div class="form-element">
                     <label class="form-item-label" for="phone">Téléphone</label>
-                    <input class="form-input" type="number" name="phone" id="phone" required>
+                    <input class="form-input" type="number" name="phone" id="phone">
                     <i class="success-icon">&#10003;</i>
                     <i class="error-icon">&#33;</i>
                     <small class="error-message">Error message</small>
@@ -78,7 +78,7 @@
                 
                 <div class="form-element">
                     <label class="form-item-label" for="message">Message <span class="required">*</span></label>
-                    <input class="form-input message-input" type="text" name="message" id="message" placeholder="Tapez votre message ici" required>
+                    <textarea class="form-input message-input" type="text" name="message" id="message" placeholder="Tapez votre message ici" required></textarea>
                     <i class="success-icon">&#10003;</i>
                     <i class="error-icon">&#33;</i>
                     <small class="error-message">Error message</small>
@@ -106,7 +106,7 @@
                     75006 Paris</p>
                 <p>Tel : +33 9 46 25 78 45 <br>
                     Mail : contact@mr-coffee.com</p>
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.124524376179!2d2.3185814157122095!3d48.83676341018329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b5590a00b1%3A0x2711ee015c1c2b2e!2s15%20Rue%20Jules%20Guesde%2C%2075014%20Paris%2C%20France!5e0!3m2!1sen!2sau!4v1628759229854!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.124524376179!2d2.3185814157122095!3d48.83676341018329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b5590a00b1%3A0x2711ee015c1c2b2e!2s15%20Rue%20Jules%20Guesde%2C%2075014%20Paris%2C%20France!5e0!3m2!1sen!2sau!4v1628759229854!5m2!1sen!2sau" width="600" height="450" loading="lazy"></iframe>
             </div>
         </section>
     </main>
