@@ -37,6 +37,8 @@ function checkInputs() {
     if (nameValue === '') {
         // show error by adding error class or success with success class, I'll create separate functions for it below
         setErrorFor(username, "Le nom d’utilisateur ne peut pas être vide") // translation: Username cannot be blank
+    } else if (!isNameValid(nameValue)) {
+        setErrorFor(username, "S’il vous plaît utiliser valide caractères") // translation: Please use valid characters
     } else {
         setSuccessFor(username);
         count++
@@ -47,6 +49,8 @@ function checkInputs() {
     if (surnameValue === '') {
         // show error by adding error class or success with success class, I'll create separate functions for it below
         setErrorFor(surname, "Le nom de famille ne peut pas être vide") // translation: Surname cannot be blank
+    } else if (!isNameValid(surnameValue)) {
+        setErrorFor(surname, "S’il vous plaît utiliser valide caractères") // translation: Please use valid characters
     } else {
         setSuccessFor(surname);
         count++
@@ -54,7 +58,9 @@ function checkInputs() {
     }
 
 //Validating phone numer 
-    if (!isPhoneValid(phoneValue)) {
+    if (phoneValue === '') {
+        dataStorage.phone = phoneValue; //this validation is for the cases when user doesn't put anything in
+    } else if (!isPhoneValid(phoneValue)) {
         setErrorFor(phone, "Veuillez saisir un numéro de téléphone valide"); // translation: Please enter a valid phone number
     } else {
         setSuccessFor(phone);
@@ -122,13 +128,19 @@ function resetSuccessError (input) {
     formElement.classList.remove('error');
 }
 
-//Function to validate phone will be here
+//Function to validate name and surname (text only)
+
+function isNameValid(input) {
+    return /^[A-Za-zÀ-ÖØ-öø-ÿ0-9 \.'\-]+$/im.test(input)
+}
+
+//Function to validate phone
 
 function isPhoneValid(phone) {
     return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(phone);
 }
 
-//Function to validate email will be here
+//Function to validate email
 
 function isEmailValid(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);

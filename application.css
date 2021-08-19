@@ -435,6 +435,13 @@ Submit button style and hover effect are added along with the index page button 
     display: block;
     border: var(--formBackground);
     padding-left: 10px;
+    color: var(--whiteColor);
+    font-size: 20px;
+    font-family: "Avenir Next";
+}
+
+.form-input:focus {
+    outline-color: var(--hoverColor);
 }
 
 .message-input {
@@ -454,15 +461,13 @@ Submit button style and hover effect are added along with the index page button 
 .message-input {
     display: block;
     flex-wrap: wrap;
-
+    padding-top: 12px;
 }
 
 .message-input::placeholder {
     color: var(--whiteColor);
     font-size: 17px;
     font-weight: bold;
-    font-family: "Avenir Next";
-    padding: 12px 4px 6px 0px;
 }
 
 .button-container {
