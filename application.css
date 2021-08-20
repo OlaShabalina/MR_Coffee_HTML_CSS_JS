@@ -536,7 +536,7 @@ Submit button style and hover effect are added along with the index page button 
 
 .popup {
     position: fixed;
-    border: 0.2px solid var(--background);
+    outline: 0.2px solid var(--background);
     background: #fcfcfc;
     display: flex;
     flex-direction: column;
