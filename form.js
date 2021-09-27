@@ -71,17 +71,18 @@ function checkInputs() {
 
 function setErrorFor(input, message) {
   const formElement = input.parentElement;
-
   const errorMessage = formElement.querySelector(".error-message");
 
   // adding error message inside small tag
   errorMessage.innerText = message;
   formElement.classList.add("error");
+  formElement.classList.remove("success");
 }
 
 function setSuccessFor(input) {
   const formElement = input.parentElement;
   formElement.classList.add("success");
+  formElement.classList.remove("error");
 }
 
 // Function to reset styles 
@@ -89,7 +90,6 @@ function setSuccessFor(input) {
 function resetSuccessError(input) {
   const formElement = input.parentElement;
   formElement.classList.remove("success");
-  formElement.classList.remove("error");
 }
 
 // Generic function to validate input using setSuccess and serError functions 
@@ -116,7 +116,7 @@ function validateInput(inputElement, validateFunction, count) {
 //Function to validate name and surname (text only)
 
 function isNameValid(input) {
-  return /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/.test(input);
+  return /^[A-Za-z\s\-`']+[\.]?[A-Za-z\s]*$/.test(input);
 }
 
 //Function to validate phone
