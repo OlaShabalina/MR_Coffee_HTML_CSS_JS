@@ -308,15 +308,18 @@ footer {
     height: 100px;
     width: 100%;
     bottom: 0;
-    display: grid;
-    grid-template-columns: 1fr auto max-content 0.5fr;
-    grid-column-gap: 10%;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo-container {
+    position: absolute;
+    height: 4.5rem;
 }
 
 .footer-logo {
-    height: 4.5rem;
-    margin-left: 1rem;
+    display: none;
 }
 
 .socials-table {
@@ -704,9 +707,15 @@ Submit button style and hover effect are added along with the index page button 
         align-content: center;
     }
 
-    .footer-logo {
+    .footer-logo-container {
+        margin-right: 90%;
+        position: absolute;
         height: 4.5rem;
-        margin-left: 4rem;
+    }
+
+    .footer-logo {
+        display: block;
+        height: 100%;
     }
 
     .socials-table {
