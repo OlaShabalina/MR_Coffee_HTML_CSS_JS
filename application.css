@@ -217,7 +217,14 @@ h2 {
     font-weight: bold;
 }
 
-/* button "find ut more" */
+/* button "find out more" */
+
+.find-more {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .find-more, .form-button, .close-popup-button {
     background-color: var(--background);
